@@ -1,0 +1,311 @@
+/* Estilos generales para pantallas grandes */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #6a0dad; /* Fondo púrpura oscuro */
+    color: #fff; /* Color de texto blanco */
+}
+
+nav {
+    background-color: #4b0082; /* Morado oscuro para la barra de navegación */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    background-color: #4b0082; /* Morado oscuro */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #6a0dad; /* Morado medio */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+.hidden {
+    display: none;
+}
+
+.inicio-contenedor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.inicio-imagen img {
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.inicio-info {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.inicio-info h3 {
+    margin-top: 0;
+}
+
+.inicio-info p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+#indicadoresContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.indicador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.disponible {
+    background-color: #4caf50; /* Verde disponible */
+}
+
+.ocupado {
+    background-color: #f44336; /* Rojo ocupado */
+}
+
+#numerosContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.numero {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.numero.libre {
+    background-color: #4caf50; /* Verde disponible */
+    color: #fff;
+}
+
+.numero.ocupado {
+    background-color: #f44336; /* Rojo ocupado */
+    color: #fff;
+}
+
+.numero:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#accionesContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4b0082; /* Morado oscuro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#desmarcarBtn, #precioTotalContainer {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#desmarcarBtn {
+    background-color: #ff4500; /* Rojo anaranjado */
+}
+
+#desmarcarBtn:hover {
+    background-color: #ff6347; /* Tomate */
+    transform: scale(1.05);
+}
+
+#precioTotalContainer {
+    background-color: #4b0082; /* Morado oscuro */
+}
+
+#enviarSolicitudBtn {
+    background-color: #4b0082; /* Morado oscuro */
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: fixed;
+    bottom: 20px; /* Fijado en la parte inferior de la pantalla */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal para centrado */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+#enviarSolicitudBtn:hover {
+    background-color: #6a0dad; /* Morado medio */
+    transform: scale(1.05) translateX(-50%);
+}
+
+#adminForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#adminForm label, #adminForm input, #adminForm button {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#adminForm input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#showPasswordBtn {
+    background-color: #ff4500; /* Rojo anaranjado */
+    color: #fff;
+}
+
+#showPasswordBtn:hover {
+    background-color: #ff6347; /* Tomate */
+}
+
+#ocupadasCount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#ocupadasCountValue {
+    color: #f44336; /* Rojo ocupado */
+}
+
+#registroForm {
+    margin: 0 auto;
+    max-width: 400px; /* Ajusta el ancho del formulario */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#registroForm label, #registroForm input, #registroForm button {
+    display: block;
+    margin-bottom: 15px; /* Espacio entre los elementos del formulario */
+    width: 100%; /* Ancho completo del formulario */
+}
+
+#registroForm input, #registroForm button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Para pantallas de tamaño mediano */
+@media (max-width: 768px) {
+    .inicio-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inicio-imagen img {
+        max-width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    #numerosContainer {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #enviarSolicitudBtn {
+        width: calc(100% - 40px); /* Ajusta el ancho del botón teniendo en cuenta el padding */
+        bottom: 20px; /* Fijado en la parte inferior de la pantalla */
+        left: 50%; /* Centrado horizontalmente */
+        transform: translateX(-50%); /* Ajusta la posición horizontal para centrado */
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 480px) {
+    .inicio-info {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .inicio-imagen img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    #numerosContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    #enviarSolicitudBtn {
+        width: calc(100% - 20px); /* Ajusta el ancho del botón para pantallas muy pequeñas */
+        bottom: 20px; /* Fijado en la parte inferior de la pantalla */
+        left: 50%; /* Centrado horizontalmente */
+        transform: translateX(-50%); /* Ajusta la posición horizontal para centrado */
+    }
+}
